@@ -1,0 +1,31 @@
+                          Upload Information Template for Hobbes.nmsu.edu
+                          ===============================================
+
+        Archive Filename: tc123101.zip
+       Short Description: tc123-1.0.1 RELEASE for OS/2
+        Long Description: An ircII script+helper applet which allows you to
+                          control z! and pm123 within your irc client console.
+                          The helper applet can also be used in any other area
+                          where you wish to show information about the mp3 you
+                          are currently playing(like email signatures!)
+
+      Proposed directory
+           for placement: /pub/os2/internet/irc/script
+
+               Your name: Kevin Berry
+           Email address: deathsyn@yahoo.com
+    Program contact name: (same)
+   Program contact email: (same)
+             Program URL: http://tc123.mm/
+
+      Would you like the
+   contact email address
+    included in listings? yes
+
+Operating System/Version: OS/2 Warp
+ Additional requirements: EMX Runtimes version 0.9c or newer
+
+                Replaces: /pub/os2/internet/irc/script/tc123v10.zip
+
+
+

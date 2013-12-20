@@ -1,0 +1,96 @@
+/* Change this to pm123 if using it */
+@player=[zmp3]
+
+/* TC123 irc script by Death Syndrome */
+@tcversion=[1.0.1-RELEASE]
+
+alias np {
+  ^exec -name query tchelper.exe tag $player
+  ^on ^exec "query *" {
+   //msg * NP: $1- [tc123]
+   echo [tc123] Playing file: $1-
+   }
+}
+
+alias lnp {
+  ^exec -name query tchelper.exe tag $player
+  ^on ^exec "query *" {
+   echo [tc123] NP: $1-
+   }
+}
+
+alias songinfo {
+  ^exec -name queryinfo tchelper.exe songinfo $player
+  ^on ^exec "queryinfo *" {
+   //msg * Stats: $1- [tc123]
+   echo [tc123] Info on current mp3: $1-
+   }
+}
+
+alias lsonginfo {
+  ^exec -name queryinfo tchelper.exe songinfo $player
+  ^on ^exec "queryinfo *" {
+   echo [tc123] Info on current mp3: $1-
+   }
+}
+
+alias file {
+  ^exec -name queryfile tchelper.exe file $player
+  ^on ^exec "queryfile *" {
+   //msg * Currently playing file: $1- [tc123]
+   echo [tc123] Currently playing file: $1-
+   }
+}
+
+alias lfile {
+  ^exec -name queryfile tchelper.exe file $player
+  ^on ^exec "queryfile *" {
+   echo [tc123] Currently playing file: $1-
+   }
+}
+
+alias rawinfo {
+  ^exec -name queryraw tchelper.exe rawinfo $player
+  ^on ^exec "queryraw *" {
+   echo [tc123] Raw data: $1-
+   }
+}
+
+alias play {
+  ^exec echo *play > /pipe/$player
+  echo [tc123] Play started.
+}
+
+alias stop {
+  ^exec echo *stop > /pipe/$player
+  echo [tc123] Play stopped.
+}
+
+alias shuffle {
+  ^exec echo *shuffle > /pipe/$player
+  echo [tc123] Playlist shuffled.
+}
+
+alias pause {
+  ^exec echo *pause > /pipe/$player
+  echo [tc123] Play pause toggled.
+}
+
+alias next {
+  ^exec echo *next > /pipe/$player
+  echo [tc123] Playing next song.
+}
+
+alias prev {
+  ^exec echo *previous > /pipe/$player
+  echo [tc123] Playing previous song.
+}
+
+alias tcquit {
+  ^exec echo *quit >/pipe/$player
+  echo [tc123] Quitting player.
+}
+
+alias tcver //me is cranking it with Total Control 123 version $tcversion - Welcome to momoland! [tc123]
+
+echo [tc123] Total Control 123 loaded.
